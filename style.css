@@ -922,9 +922,11 @@ a {
         display: grid;
         grid-template-areas: "box1" "box2" "box3" "box4";
         grid-template-columns: 1fr;
-        grid-template-rows: 1fr 1fr 1fr 50px;
+        grid-template-rows: 1fr 1fr 1fr 100px;
     }
-    .products__head__sort {
+    .main__products__head .products__head__sort {
+        flex-wrap: wrap;
+        height: 100px;
         width: 260px;
     }
 }
@@ -1056,6 +1058,18 @@ a {
     color: rgba(196, 196, 196, 1);
 }
 
+.products__nav .product__nav_activ {
+    color: rgb(239, 91, 113);
+    font-weight: bold;
+    pointer-events: none;
+    cursor: default
+}
+
+.products__nav a:hover {
+    color: rgb(239, 91, 113);
+    font-weight: bold;
+}
+
 .products__nav a:last-child, .products__nav a:first-child {
     font-weight: bold;
 }
@@ -1081,6 +1095,7 @@ a {
 
 .main__products__foot button:hover {
     background-color: rgb(239, 91, 113);
+    opacity: .7;
     color: #fff;
 }
 
