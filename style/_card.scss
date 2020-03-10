@@ -1,0 +1,256 @@
+@charset "UTF-8";
+@import "vars";
+/***************************/
+/* start shopping-card.html */
+/***************************/
+/* start main__basket */
+.main__basket {
+
+  .basket {
+    margin-top: 50px;
+    font-size: 13px;
+    text-align: center;
+    border-collapse: collapse;
+    color: $textcolor;
+
+    th {
+      height: 55px;
+      width: 155px;
+      text-transform: uppercase;
+      font-weight: bold;
+      border-bottom: 1px solid $bordercolor;
+
+      &:last-of-type {
+        width: 60px;
+      }
+
+      &:first-child {
+        text-align: left;
+      }
+    }
+
+    td {
+      border-bottom: 1px solid $bordercolor;
+      height: 160px;
+      color: #656565;
+
+      input {
+        height: 30px;
+        width: 55px;
+        text-align: center;
+        color: #656565;
+        border: 1px solid $bordercolor;
+        outline: none;
+
+        &::-webkit-outer-spin-button,
+        &::-webkit-inner-spin-button {
+          -webkit-appearance: none;
+        }
+      }
+
+      &:last-child img:hover {
+        transform: rotate(360deg);
+        transition-duration: 1s;
+      }
+    }
+
+    .td__main {
+      width: 40%;
+    }
+
+    &__product {
+      text-align: left;
+
+      &:hover img {
+        filter: brightness(0.8);
+      }
+
+      img {
+        height: 115px;
+        float: left;
+        margin-right: 25px;
+        cursor: pointer;
+      }
+
+      h4 {
+        text-transform: uppercase;
+        margin-bottom: 40px;
+        padding-top: 10px;
+
+        a {
+          color: $textcolor;
+
+          &:hover {
+            color: $main-color;
+          }
+        }
+      }
+
+      p {
+        color: #575757;
+        margin-bottom: 8px;
+
+        span {
+          color: #6f6e6e;
+          padding-left: 10px;
+        }
+      }
+    }
+  }
+
+  footer {
+    display: flex;
+    justify-content: space-between;
+
+    button {
+      height: 50px;
+      width: 235px;
+      outline: none;
+      font-size: 14px;
+      font-weight: bold;
+      color: #4a4a4a;
+      background-color: $bg-color;
+      border: 1px solid $bordercolor;
+      margin: 45px 0;
+
+      &:hover {
+        background-color: $main-color;
+        color: $bg-color;
+      }
+
+      &:active {
+        transform: scale(.96);
+      }
+    }
+  }
+}
+
+.delivery {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 15px;
+  margin-bottom: 80px;
+
+  h4 {
+    font-size: 16px;
+    font-weight: 900;
+    color: $textcolor;
+    text-transform: uppercase;
+  }
+
+  input {
+    display: block;
+    width: 355px;
+    height: 45px;
+    padding: 17px;
+    margin: 20px 0;
+    font-size: 13px;
+    font-weight: 300;
+    border: 1px solid $bordercolor;
+
+    &::placeholder {
+      color: #b1b1b1;
+    }
+
+    &:active,
+    &:focus {
+      outline: none;
+      border-color: $main-color;
+    }
+  }
+
+  button {
+    font-size: 11px;
+    font-weight: bold;
+    color: #4a4a4a;
+    text-transform: uppercase;
+    padding: 12px 16px;
+    border: 1px solid $bordercolor;
+    background-color: $bg-color;
+
+    &:focus {
+      outline: none;
+    }
+
+    &:not(.form__select):hover {
+      background-color: $main-color;
+      color: $bg-color;
+    }
+
+    &:not(.form__select):active {
+      transform: scale(.98);
+    }
+  }
+
+  .form__select {
+    @extend input;
+    text-align: left;
+    color: #b1b1b1;
+    outline: none;
+    text-transform: inherit;
+    background-image: url(../img/arrowGray.png);
+    background-repeat: no-repeat;
+    background-position: 334px 20px;
+
+    &:focus {
+      border-color: $bordercolor;
+    }
+  }
+
+  p {
+    margin: 25px 0;
+    font-size: 13px;
+  }
+
+  .total {
+    padding: 40px;
+    background-color: #f5f3f3;
+    text-align: right;
+    height: 214px;
+
+    &__box {
+      border-bottom: 1px solid $bordercolor;
+      margin-bottom: 16px;
+
+      h5 {
+        font-size: 11px;
+        color: #4a4a4a;
+        text-transform: uppercase;
+
+        span {
+          margin-left: 15px;
+        }
+      }
+
+      h4 {
+        font-size: 16px;
+        font-weight: bold;
+        color: $textcolor;
+        text-transform: uppercase;
+        margin: 14px 0 22px;
+
+        span {
+          margin-left: 15px;
+          color: $main-color;
+        }
+      }
+    }
+
+    &__btn {
+      height: 50px;
+      width: 273px;
+      outline: none;
+      font-size: 16px;
+      font-weight: bold;
+      color: $bg-color;
+      text-transform: uppercase;
+      background-color: $main-color;
+
+      &:hover {
+        opacity: .8;
+        border-color: $main-color2;
+      }
+    }
+  }
+}
+/* end main__basket */
