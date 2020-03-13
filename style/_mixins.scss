@@ -1,0 +1,95 @@
+@mixin main-logo {
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin-right: 37px;
+  font-size: 27px;
+  color: $textcolor;
+  letter-spacing: 0.03em;
+  line-height: 32px;
+  font-weight: 300;
+
+  &:before {
+    position: absolute;
+    content: "";
+    background-color: $main-color;
+    top: 45px;
+    left: 70px;
+    height: 2px;
+    width: 0;
+    transition: width .5s;
+  }
+
+  &:hover {
+    color: $textcolor;
+
+    &:before {
+      width: 100px;
+    }
+  }
+
+  &__last_simbol {
+    font-weight: 900;
+    color: $main-color;
+  }
+
+  &__img {
+    margin-right: 13px;
+  }
+}
+
+@mixin first-btn {
+  outline: none;
+  border: none;
+  color: $bg-color;
+  background-color: $main-color;
+  text-align: center;
+
+  &:hover {
+    color: $main-color;
+    background-color: $bg-color;
+    border: 1px solid $main-color;
+  }
+
+  &:active {
+    transform: scale(0.95);
+  }
+}
+
+@mixin secondary-btn {
+  outline: none;
+  color: $text-btn;
+  background-color: $bg-color;
+  border: 1px solid $bordercolor;
+  text-align: center;
+
+  &:hover {
+    border-color: $main-color;
+    color: $main-color2;
+  }
+
+  &:active {
+    transform: scale(0.95);
+  }
+}
+
+@mixin third-btn {
+  outline: none;
+  color: $main-color2;
+  background-color: $bg-color;
+  border: 1px solid $main-color2;
+
+  &:hover {
+    background-color: $main-color2;
+    color: $bg-color;
+  }
+
+  &:active {
+    transform: scale(0.95);
+  }
+}
+
+@mixin hover-link {
+  color: $main-color;
+  font-weight: bold;
+}

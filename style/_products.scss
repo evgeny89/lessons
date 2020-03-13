@@ -52,6 +52,7 @@
     }
   }
 }
+
 /* end catalog */
 
 /* start main */
@@ -73,6 +74,10 @@
           color: $main-color2;
           background-image: url(../img/arrowRed.png);
         }
+      }
+
+      .main__sort__details:hover {
+        background-color: $main-color-hover;
       }
 
       .main__drop__list {
@@ -174,7 +179,6 @@
         }
       }
 
-
       .products__head__size {
         grid-area: box2;
         font-size: 14px;
@@ -186,10 +190,50 @@
           width: 60px;
           height: 20px;
           vertical-align: top;
-        }
 
-        span {
-          margin-left: 5px;
+          input {
+            display: none;
+
+            &:checked + label:after {
+              display: block;
+            }
+          }
+
+          label {
+            cursor: pointer;
+            position: relative;
+            padding-left: 25px;
+
+            &:before {
+              position: absolute;
+              content: "";
+              font-size: 0;
+              height: 13px;
+              width: 13px;
+              background-color: $bg-color;
+              border: 1px solid $main2color;
+              left: 0;
+              top: 0;
+            }
+
+            &:after {
+              display: none;
+              position: absolute;
+              content: "";
+              font-size: 0;
+              height: 4px;
+              width: 7px;
+              border-bottom: 2px solid $textcolor;
+              border-left: 2px solid $textcolor;
+              transform: rotate(-45deg);
+              left: 3px;
+              top: 3px;
+            }
+
+            &:hover:before {
+              border-color: $main-color;
+            }
+          }
         }
       }
 
@@ -228,8 +272,6 @@
             display: inline-block;
             height: 30px;
             width: 86px;
-            outline: none;
-            border: none;
             font-size: 14px;
             color: #6f6e6e;
             background-color: $bg-color;
@@ -238,6 +280,14 @@
             background-image: url(../img/arrowBlack.png);
             background-repeat: no-repeat;
             background-position: 68px center;
+
+            &:hover {
+              outline: 1px solid $main-color;
+            }
+
+            &:active {
+              transform: scale(0.95);
+            }
           }
 
           &:last-child span {
@@ -247,6 +297,7 @@
         }
       }
     }
+
     /* конец шапки раздела */
 
     /* start main__products__catalog */
@@ -294,30 +345,20 @@
           cursor: default;
         }
       }
+
       button {
         height: 44px;
         width: 150px;
         font-size: 16px;
         font-weight: 300;
-        color: $main-color2;
         line-height: 26px;
-        outline: none;
-        background-color: $bg-color;
-        border: 1px solid $main-color2;
         border-radius: 3px;
         cursor: pointer;
 
-        &:hover {
-          background-color: $main-color2;
-          opacity: 0.7;
-          color: $bg-color;
-        }
-
-        &:active {
-          box-shadow: inset 1px 1px 1px rgba(0, 0, 0, 0.6), inset -1px -1px 1px rgba(0, 0, 0, 0.6);
-        }
+        @include third-btn;
       }
     }
+
     /* end main__products__catalog */
   }
 }

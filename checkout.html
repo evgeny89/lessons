@@ -1,20 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BRAND Product</title>
+    <title>Checkout</title>
     <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style/style.css">
     <script src="https://kit.fontawesome.com/5fef815a08.js" crossorigin="anonymous"></script>
-    <script>
-        function addToCard() {
-            alert("Товар добавлен");
-        }
-    </script>
 </head>
-
 <body>
 <header class="header center">
     <div class="header__left">
@@ -103,7 +96,7 @@
 <nav class="nav">
     <ul class="menu center">
         <li class="menu__list"><a href="index.html" class="menu__link">Home</a></li>
-        <li class="menu__list"><a href="#" class="menu__link activ__menu">Man</a>
+        <li class="menu__list"><a href="catalog.html" class="menu__link">Man</a>
             <div class="drop__menu">
                 <div>
                     <h4>WOMEN</h4>
@@ -146,7 +139,7 @@
                 </div>
             </div>
         </li>
-        <li class="menu__list"><a href="#" class="menu__link">Women</a></li>
+        <li class="menu__list"><a href="#" class="menu__link activ__menu">Women</a></li>
         <li class="menu__list"><a href="#" class="menu__link">Kids</a></li>
         <li class="menu__list"><a href="#" class="menu__link">Accoseriese</a></li>
         <li class="menu__list"><a href="#" class="menu__link">Featured</a>
@@ -192,7 +185,7 @@
                 </div>
             </div>
         </li>
-        <li class="menu__list"><a href="" class="menu__link">Hot Deals</a></li>
+        <li class="menu__list"><a href="#" class="menu__link">Hot Deals</a></li>
     </ul>
 </nav>
 <!-- end nav -->
@@ -204,252 +197,71 @@
         <a href="#" class="product__activ__link">New Arrivals</a>
     </nav>
 </section>
-<!-- end promo__product -->
-<div class="main center">
-    <aside class="main__sort">
-        <div class="main__sort__box">
-            <input type="radio" name="sort" id="main_category" checked>
-            <label class="main__sort__details" for="main_category">Category</label>
-            <ul class="main__drop__list">
-                <li><input type="checkbox" id="drop1"><label for="drop1">Accessories</label></li>
-                <li><input type="checkbox" id="drop2"><label for="drop2">Bags</label></li>
-                <li><input type="checkbox" id="drop3"><label for="drop3">Denim</label></li>
-                <li><input type="checkbox" id="drop4"><label for="drop4">Hoodies &amp;&nbsp;Sweatshirts</label></li>
-                <li><input type="checkbox" id="drop5"><label for="drop5">Jakets &amp;&nbsp;Coats</label></li>
-                <li><input type="checkbox" id="drop6"><label for="drop6">Pants</label></li>
-                <li><input type="checkbox" id="drop7"><label for="drop7">Polos</label></li>
-                <li><input type="checkbox" id="drop8"><label for="drop8">Shirts</label></li>
-                <li><input type="checkbox" id="drop9"><label for="drop9">Shoes</label></li>
-                <li><input type="checkbox" id="drop10"><label for="drop10">Shorts</label></li>
-                <li><input type="checkbox" id="drop11"><label for="drop11">Sweaters &amp;&nbsp;Knits</label></li>
-                <li><input type="checkbox" id="drop12"><label for="drop12">T-Shirts</label></li>
-                <li><input type="checkbox" id="drop13"><label for="drop13">Tanks</label></li>
-            </ul>
-        </div>
-        <div class="main__sort__box">
-            <input type="radio" name="sort" id="main_brand">
-            <label class="main__sort__details" for="main_brand">Brand</label>
-            <ul class="main__drop__list">
-                <li><input type="checkbox" id="drop14"><label for="drop14">Accessories</label></li>
-                <li><input type="checkbox" id="drop15"><label for="drop15">Bags</label></li>
-                <li><input type="checkbox" id="drop16"><label for="drop16">Denim</label></li>
-                <li><input type="checkbox" id="drop17"><label for="drop17">Hoodies &amp;&nbsp;Sweatshirts</label>
-                </li>
-                <li><input type="checkbox" id="drop18"><label for="drop18">Jakets &amp;&nbsp;Coats</label></li>
-                <li><input type="checkbox" id="drop19"><label for="drop19">Pants</label></li>
-                <li><input type="checkbox" id="drop20"><label for="drop20">Polos</label></li>
-                <li><input type="checkbox" id="drop21"><label for="drop21">Shirts</label></li>
-                <li><input type="checkbox" id="drop22"><label for="drop22">Shoes</label></li>
-                <li><input type="checkbox" id="drop23"><label for="drop23">Shorts</label></li>
-                <li><input type="checkbox" id="drop24"><label for="drop24">Sweaters &amp;&nbsp;Knits</label></li>
-                <li><input type="checkbox" id="drop25"><label for="drop25">T-Shirts</label></li>
-                <li><input type="checkbox" id="drop26"><label for="drop26">Tanks</label></li>
-            </ul>
-        </div>
-        <div class="main__sort__box">
-            <input type="radio" name="sort" id="main_designer">
-            <label class="main__sort__details" for="main_designer">Designer</label>
-            <ul class="main__drop__list">
-                <li><input type="checkbox" id="drop27"><label for="drop27">Accessories</label></li>
-                <li><input type="checkbox" id="drop28"><label for="drop28">Bags</label></li>
-                <li><input type="checkbox" id="drop29"><label for="drop29">Denim</label></li>
-                <li><input type="checkbox" id="drop30"><label for="drop30">Hoodies &amp;&nbsp;Sweatshirts</label>
-                </li>
-                <li><input type="checkbox" id="drop31"><label for="drop31">Jakets &amp;&nbsp;Coats</label></li>
-                <li><input type="checkbox" id="drop32"><label for="drop32">Pants</label></li>
-                <li><input type="checkbox" id="drop33"><label for="drop33">Polos</label></li>
-                <li><input type="checkbox" id="drop34"><label for="drop34">Shirts</label></li>
-                <li><input type="checkbox" id="drop35"><label for="drop35">Shoes</label></li>
-                <li><input type="checkbox" id="drop36"><label for="drop36">Shorts</label></li>
-                <li><input type="checkbox" id="drop37"><label for="drop37">Sweaters &amp;&nbsp;Knits</label></li>
-                <li><input type="checkbox" id="drop38"><label for="drop38">T-Shirts</label></li>
-                <li><input type="checkbox" id="drop39"><label for="drop39">Tanks</label></li>
-            </ul>
-        </div>
-    </aside>
-    <!-- end main__sort -->
-    <section class="main__products">
-        <header class="main__products__head">
-            <aside class="products__head__trend">
-                <h4>Trending now</h4>
-                <div>
-                    <a href="#">Bohemian</a>
-                    <a href="#">Floral</a>
-                    <a href="#">Lace</a>
+<!-- end catalog -->
+<div class="shipper center">
+    <article>
+        <input type="radio" name="shipper-info" id="shipper1" checked>
+        <label for="shipper1">01. SHIPPING ADRESS</label>
+        <div class="shipper__label">
+            <div class="log_in">
+                <h3>Check as a guest or register</h3>
+                <p>Register with us for future convenience</p>
+                <div class="label__box">
+                    <input type="radio" id="login1" name="checkout" onchange="regBox('login1');">
+                    <label for="login1">checkout as guest</label>
                 </div>
-                <div>
-                    <a href="#">Lace</a>
-                    <a href="#">Floral</a>
-                    <a href="#">Bohemian</a>
+                <div class="label__box">
+                    <input type="radio" id="login2" name="checkout" onchange="regBox('login2');" checked>
+                    <label for="login2">register</label>
                 </div>
-            </aside>
-            <aside class="products__head__size">
-                <h4>Size</h4>
-                <table>
-                    <tr>
-                        <td>
-                            <input type="checkbox" name="size" id="xxs">
-                            <label for="xxs">XXS</label>
-                        </td>
-                        <td><input type="checkbox" name="size" id="xs">
-                            <label for="xs">XS</label>
-                        </td>
-                        <td>
-                            <input type="checkbox" name="size" id="s">
-                            <label for="s">S</label>
-                        </td>
-                        <td>
-                            <input type="checkbox" name="size" id="m">
-                            <label for="m">M</label>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <input type="checkbox" name="size" id="l">
-                            <label for="l">L</label>
-                        </td>
-                        <td>
-                            <input type="checkbox" name="size" id="xl">
-                            <label for="xl">XL</label>
-                        </td>
-                        <td>
-                            <input type="checkbox" name="size" id="xxl">
-                            <label for="xxl">XXL</label>
-                        </td>
-                        <td></td>
-                    </tr>
-                </table>
-            </aside>
-            <aside class="products__head__prise">
-                <h4>Prise</h4>
-                <input type="range" min="5" max="1000" step="5" id="prise-range">
-                <!-- ползунок невозможно стилизовать только средствами CSS -->
-                <label for="prise-range"></label>
-            </aside>
-            <aside class="products__head__sort">
-                <div>
-                    <input type="text" disabled value="Sort By">
-                    <span>Name</span>
-                </div>
-                <div>
-                    <input type="text" disabled value="Show">
-                    <span>09</span>
-                </div>
-            </aside>
-        </header>
-        <div class="main__products__catalog items__list">
-            <article class="item__box">
-                <a href="singlepage.html"><img src="img/item9.jpg" alt="item9"></a>
-                <a href="singlepage.html">
-                    <h4>Mango People T-shirt</h4>
-                </a>
-                <h5>$52.00</h5>
-                <a class="add__tocard" onclick="addToCard();">Add to Cart</a>
-            </article>
-            <article class="item__box">
-                <a href="singlepage.html"><img src="img/item10.jpg" alt="item10"></a>
-                <a href="singlepage.html">
-                    <h4>Mango People T-shirt</h4>
-                </a>
-                <h5>$52.00</h5>
-                <a class="add__tocard" onclick="addToCard();">Add to Cart</a>
-            </article>
-            <article class="item__box">
-                <a href="singlepage.html"><img src="img/item3.jpg" alt="item3"></a>
-                <a href="singlepage.html">
-                    <h4>Mango People T-shirt</h4>
-                </a>
-                <h5>$52.00</h5>
-                <a class="add__tocard" onclick="addToCard();">Add to Cart</a>
-            </article>
-            <article class="item__box">
-                <a href="singlepage.html"><img src="img/item11.jpg" alt="item11"></a>
-                <a href="singlepage.html">
-                    <h4>Mango People T-shirt</h4>
-                </a>
-                <h5>$52.00</h5>
-                <a class="add__tocard" onclick="addToCard();">Add to Cart</a>
-            </article>
-            <article class="item__box">
-                <a href="singlepage.html"><img src="img/item8.jpg" alt="item8"></a>
-                <a href="singlepage.html">
-                    <h4>Mango People T-shirt</h4>
-                </a>
-                <h5>$52.00</h5>
-                <a class="add__tocard" onclick="addToCard();">Add to Cart</a>
-            </article>
-            <article class="item__box">
-                <a href="singlepage.html"><img src="img/item12.jpg" alt="item12"></a>
-                <a href="singlepage.html">
-                    <h4>Mango People T-shirt</h4>
-                </a>
-                <h5>$52.00</h5>
-                <a class="add__tocard" onclick="addToCard();">Add to Cart</a>
-            </article>
-            <article class="item__box">
-                <a href="singlepage.html"><img src="img/item6.jpg" alt="item6"></a>
-                <a href="singlepage.html">
-                    <h4>Mango People T-shirt</h4>
-                </a>
-                <h5>$52.00</h5>
-                <a class="add__tocard" onclick="addToCard();">Add to Cart</a>
-            </article>
-            <article class="item__box">
-                <a href="singlepage.html"><img src="img/item13.jpg" alt="item13"></a>
-                <a href="singlepage.html">
-                    <h4>Mango People T-shirt</h4>
-                </a>
-                <h5>$52.00</h5>
-                <a class="add__tocard" onclick="addToCard();">Add to Cart</a>
-            </article>
-            <article class="item__box">
-                <a href="singlepage.html"><img src="img/item14.jpg" alt="item14"></a>
-                <a href="singlepage.html">
-                    <h4>Mango People T-shirt</h4>
-                </a>
-                <h5>$52.00</h5>
-                <a class="add__tocard" onclick="addToCard();">Add to Cart</a>
-            </article>
+                <h3>register and save time!</h3>
+                <p>Register with us for future convenience</p>
+                <p>Fast and easy checkout</p>
+                <p>Easy access to your order history and status</p>
+                <button>Continue</button>
+            </div>
+            <div class="registration" id="reg">
+                <h3>Already registed?</h3>
+                <p>Please log in below</p>
+                <form action="#">
+                    <h4>EMAIL ADDRESS</h4>
+                    <input type="email" required>
+                    <h4>PASSWORD</h4>
+                    <input type="password" required>
+                    <h5>Required Fileds</h5>
+                    <button type="submit">Log in</button>
+                    <a href="#">Forgot Password ?</a>
+                </form>
+            </div>
         </div>
-        <footer class="main__products__foot">
-            <nav class="products__nav">
-                <a href="#">&lt;</a>
-                <a href="#" class="product__nav_activ">1</a>
-                <a href="#">2</a>
-                <a href="#">3</a>
-                <a href="#">4</a>
-                <a href="#">5</a>
-                <a href="#">6</a>
-                <span>......</span>
-                <a href="#">20</a>
-                <a href="#">&gt;</a>
-            </nav>
-            <button>View All</button>
-        </footer>
-    </section>
-</div>
-<!-- end main -->
-<div class="offers__box product__offers__box center">
-    <article class="offers__list1 offers__list product__offers__list">
-        <h5>Free Delivery</h5>
-        <p>Worldwide delivery on all. Authorit tively morph next-generation innov tion with extensive
-            models.
-        </p>
     </article>
-    <article class="offers__list2 offers__list product__offers__list">
-        <h5>Sales &amp;&nbsp;discounts</h5>
-        <p>Worldwide delivery on all. Authorit tively morph next-generation innov tion with extensive
-            models.
-        </p>
+    <article>
+        <input type="radio" name="shipper-info" id="shipper2">
+        <label for="shipper2">02. BILLING INFORMATION</label>
+        <div class="shipper__label"></div>
     </article>
-    <article class="offers__list3 offers__list product__offers__list">
-        <h5>Quality assurance</h5>
-        <p>Worldwide delivery on all. Authorit tively morph next-generation innov tion with extensive
-            models.
-        </p>
+    <article>
+        <input type="radio" name="shipper-info" id="shipper3">
+        <label for="shipper3">03. SHIPPING INFORMATION</label>
+        <div class="shipper__label"></div>
+    </article>
+    <article>
+        <input type="radio" name="shipper-info" id="shipper4">
+        <label for="shipper4">04. SHIPPING METHOD</label>
+        <div class="shipper__label"></div>
+    </article>
+    <article>
+        <input type="radio" name="shipper-info" id="shipper5">
+        <label for="shipper5">05. PAYMENT METHOD</label>
+        <div class="shipper__label"></div>
+    </article>
+    <article>
+        <input type="radio" name="shipper-info" id="shipper6">
+        <label for="shipper6">06. ORDER REVIEW</label>
+        <div class="shipper__label"></div>
     </article>
 </div>
-<!-- end offers__box -->
+<!-- end shipper -->
 <footer class="footer">
     <aside class="subscribe">
         <div class="subscribe__slider">
@@ -554,6 +366,16 @@
     </div>
 </footer>
 <!-- end footer -->
+<script>
+    function regBox(id) {
+        let getCheck = document.getElementById(id);
+        if (id === "login1" && getCheck.checked) {
+            document.getElementById("reg").style.display = "none";
+        }
+        if (id === "login2" && getCheck.checked) {
+            document.getElementById("reg").style.display = "block";
+        }
+    }
+</script>
 </body>
-
 </html>
