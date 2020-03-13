@@ -103,7 +103,7 @@
 <nav class="nav">
     <ul class="menu center">
         <li class="menu__list"><a href="index.html" class="menu__link">Home</a></li>
-        <li class="menu__list"><a href="catalog.html" class="menu__link">Man</a>
+        <li class="menu__list"><a href="#" class="menu__link activ__menu">Man</a>
             <div class="drop__menu">
                 <div>
                     <h4>WOMEN</h4>
@@ -192,7 +192,7 @@
                 </div>
             </div>
         </li>
-        <li class="menu__list"><a href="#" class="menu__link">Hot Deals</a></li>
+        <li class="menu__list"><a href="" class="menu__link">Hot Deals</a></li>
     </ul>
 </nav>
 <!-- end nav -->
@@ -205,86 +205,246 @@
     </nav>
 </section>
 <!-- end promo__product -->
-<div class="single__preview center">
-    <a href="#" class="preview__prew"></a>
-    <a href="#" class="preview__next"></a>
+<div class="main center">
+    <aside class="main__sort">
+        <div class="main__sort__box">
+            <input type="radio" name="sort" id="main_category" checked>
+            <label class="main__sort__details" for="main_category">Category</label>
+            <ul class="main__drop__list">
+                <li><input type="checkbox" id="drop1"><label for="drop1">Accessories</label></li>
+                <li><input type="checkbox" id="drop2"><label for="drop2">Bags</label></li>
+                <li><input type="checkbox" id="drop3"><label for="drop3">Denim</label></li>
+                <li><input type="checkbox" id="drop4"><label for="drop4">Hoodies &amp;&nbsp;Sweatshirts</label></li>
+                <li><input type="checkbox" id="drop5"><label for="drop5">Jakets &amp;&nbsp;Coats</label></li>
+                <li><input type="checkbox" id="drop6"><label for="drop6">Pants</label></li>
+                <li><input type="checkbox" id="drop7"><label for="drop7">Polos</label></li>
+                <li><input type="checkbox" id="drop8"><label for="drop8">Shirts</label></li>
+                <li><input type="checkbox" id="drop9"><label for="drop9">Shoes</label></li>
+                <li><input type="checkbox" id="drop10"><label for="drop10">Shorts</label></li>
+                <li><input type="checkbox" id="drop11"><label for="drop11">Sweaters &amp;&nbsp;Knits</label></li>
+                <li><input type="checkbox" id="drop12"><label for="drop12">T-Shirts</label></li>
+                <li><input type="checkbox" id="drop13"><label for="drop13">Tanks</label></li>
+            </ul>
+        </div>
+        <div class="main__sort__box">
+            <input type="radio" name="sort" id="main_brand">
+            <label class="main__sort__details" for="main_brand">Brand</label>
+            <ul class="main__drop__list">
+                <li><input type="checkbox" id="drop14"><label for="drop14">Accessories</label></li>
+                <li><input type="checkbox" id="drop15"><label for="drop15">Bags</label></li>
+                <li><input type="checkbox" id="drop16"><label for="drop16">Denim</label></li>
+                <li><input type="checkbox" id="drop17"><label for="drop17">Hoodies &amp;&nbsp;Sweatshirts</label>
+                </li>
+                <li><input type="checkbox" id="drop18"><label for="drop18">Jakets &amp;&nbsp;Coats</label></li>
+                <li><input type="checkbox" id="drop19"><label for="drop19">Pants</label></li>
+                <li><input type="checkbox" id="drop20"><label for="drop20">Polos</label></li>
+                <li><input type="checkbox" id="drop21"><label for="drop21">Shirts</label></li>
+                <li><input type="checkbox" id="drop22"><label for="drop22">Shoes</label></li>
+                <li><input type="checkbox" id="drop23"><label for="drop23">Shorts</label></li>
+                <li><input type="checkbox" id="drop24"><label for="drop24">Sweaters &amp;&nbsp;Knits</label></li>
+                <li><input type="checkbox" id="drop25"><label for="drop25">T-Shirts</label></li>
+                <li><input type="checkbox" id="drop26"><label for="drop26">Tanks</label></li>
+            </ul>
+        </div>
+        <div class="main__sort__box">
+            <input type="radio" name="sort" id="main_designer">
+            <label class="main__sort__details" for="main_designer">Designer</label>
+            <ul class="main__drop__list">
+                <li><input type="checkbox" id="drop27"><label for="drop27">Accessories</label></li>
+                <li><input type="checkbox" id="drop28"><label for="drop28">Bags</label></li>
+                <li><input type="checkbox" id="drop29"><label for="drop29">Denim</label></li>
+                <li><input type="checkbox" id="drop30"><label for="drop30">Hoodies &amp;&nbsp;Sweatshirts</label>
+                </li>
+                <li><input type="checkbox" id="drop31"><label for="drop31">Jakets &amp;&nbsp;Coats</label></li>
+                <li><input type="checkbox" id="drop32"><label for="drop32">Pants</label></li>
+                <li><input type="checkbox" id="drop33"><label for="drop33">Polos</label></li>
+                <li><input type="checkbox" id="drop34"><label for="drop34">Shirts</label></li>
+                <li><input type="checkbox" id="drop35"><label for="drop35">Shoes</label></li>
+                <li><input type="checkbox" id="drop36"><label for="drop36">Shorts</label></li>
+                <li><input type="checkbox" id="drop37"><label for="drop37">Sweaters &amp;&nbsp;Knits</label></li>
+                <li><input type="checkbox" id="drop38"><label for="drop38">T-Shirts</label></li>
+                <li><input type="checkbox" id="drop39"><label for="drop39">Tanks</label></li>
+            </ul>
+        </div>
+    </aside>
+    <!-- end main__sort -->
+    <section class="main__products">
+        <header class="main__products__head">
+            <aside class="products__head__trend">
+                <h4>Trending now</h4>
+                <div>
+                    <a href="#">Bohemian</a>
+                    <a href="#">Floral</a>
+                    <a href="#">Lace</a>
+                </div>
+                <div>
+                    <a href="#">Lace</a>
+                    <a href="#">Floral</a>
+                    <a href="#">Bohemian</a>
+                </div>
+            </aside>
+            <aside class="products__head__size">
+                <!-- чекбоксы стандартные, не кастомные, в сотальном все норм -->
+                <h4>Size</h4>
+                <table>
+                    <tr>
+                        <td><label>
+                            <input type="checkbox" name="size">
+                            <span>XXS</span></label></td>
+                        <td><label>
+                            <input type="checkbox" name="size">
+                            <span>XS</span></label></td>
+                        <td><label>
+                            <input type="checkbox" name="size">
+                            <span>S</span></label></td>
+                        <td><label>
+                            <input type="checkbox" name="size">
+                            <span>M</span></label></td>
+                    </tr>
+                    <tr>
+                        <td><label>
+                            <input type="checkbox" name="size">
+                            <span>L</span></label></td>
+                        <td><label>
+                            <input type="checkbox" name="size">
+                            <span>XL</span></label></td>
+                        <td><label>
+                            <input type="checkbox" name="size">
+                            <span>XXL</span></label></td>
+                        <td></td>
+                    </tr>
+                </table>
+            </aside>
+            <aside class="products__head__prise">
+                <h4>Prise</h4>
+                <input type="range" min="5" max="1000" step="5" id="prise-range">
+                <!-- ползунок невозможно стилизовать только средствами CSS -->
+                <label for="prise-range"></label>
+            </aside>
+            <aside class="products__head__sort">
+                <div>
+                    <input type="text" disabled value="Sort By">
+                    <span>Name</span>
+                </div>
+                <div>
+                    <input type="text" disabled value="Show">
+                    <span>09</span>
+                </div>
+            </aside>
+        </header>
+        <div class="main__products__catalog items__list">
+            <article class="item__box">
+                <a href="singlepage.html"><img src="img/item9.jpg" alt="item9"></a>
+                <a href="singlepage.html">
+                    <h4>Mango People T-shirt</h4>
+                </a>
+                <h5>$52.00</h5>
+                <a class="add__tocard" onclick="addToCard();">Add to Cart</a>
+            </article>
+            <article class="item__box">
+                <a href="singlepage.html"><img src="img/item10.jpg" alt="item10"></a>
+                <a href="singlepage.html">
+                    <h4>Mango People T-shirt</h4>
+                </a>
+                <h5>$52.00</h5>
+                <a class="add__tocard" onclick="addToCard();">Add to Cart</a>
+            </article>
+            <article class="item__box">
+                <a href="singlepage.html"><img src="img/item3.jpg" alt="item3"></a>
+                <a href="singlepage.html">
+                    <h4>Mango People T-shirt</h4>
+                </a>
+                <h5>$52.00</h5>
+                <a class="add__tocard" onclick="addToCard();">Add to Cart</a>
+            </article>
+            <article class="item__box">
+                <a href="singlepage.html"><img src="img/item11.jpg" alt="item11"></a>
+                <a href="singlepage.html">
+                    <h4>Mango People T-shirt</h4>
+                </a>
+                <h5>$52.00</h5>
+                <a class="add__tocard" onclick="addToCard();">Add to Cart</a>
+            </article>
+            <article class="item__box">
+                <a href="singlepage.html"><img src="img/item8.jpg" alt="item8"></a>
+                <a href="singlepage.html">
+                    <h4>Mango People T-shirt</h4>
+                </a>
+                <h5>$52.00</h5>
+                <a class="add__tocard" onclick="addToCard();">Add to Cart</a>
+            </article>
+            <article class="item__box">
+                <a href="singlepage.html"><img src="img/item12.jpg" alt="item12"></a>
+                <a href="singlepage.html">
+                    <h4>Mango People T-shirt</h4>
+                </a>
+                <h5>$52.00</h5>
+                <a class="add__tocard" onclick="addToCard();">Add to Cart</a>
+            </article>
+            <article class="item__box">
+                <a href="singlepage.html"><img src="img/item6.jpg" alt="item6"></a>
+                <a href="singlepage.html">
+                    <h4>Mango People T-shirt</h4>
+                </a>
+                <h5>$52.00</h5>
+                <a class="add__tocard" onclick="addToCard();">Add to Cart</a>
+            </article>
+            <article class="item__box">
+                <a href="singlepage.html"><img src="img/item13.jpg" alt="item13"></a>
+                <a href="singlepage.html">
+                    <h4>Mango People T-shirt</h4>
+                </a>
+                <h5>$52.00</h5>
+                <a class="add__tocard" onclick="addToCard();">Add to Cart</a>
+            </article>
+            <article class="item__box">
+                <a href="singlepage.html"><img src="img/item14.jpg" alt="item14"></a>
+                <a href="singlepage.html">
+                    <h4>Mango People T-shirt</h4>
+                </a>
+                <h5>$52.00</h5>
+                <a class="add__tocard" onclick="addToCard();">Add to Cart</a>
+            </article>
+        </div>
+        <footer class="main__products__foot">
+            <nav class="products__nav">
+                <a href="#">&lt;</a>
+                <a href="#" class="product__nav_activ">1</a>
+                <a href="#">2</a>
+                <a href="#">3</a>
+                <a href="#">4</a>
+                <a href="#">5</a>
+                <a href="#">6</a>
+                <span>......</span>
+                <a href="#">20</a>
+                <a href="#">&gt;</a>
+            </nav>
+            <button>View All</button>
+        </footer>
+    </section>
 </div>
-<!-- end single__preview -->
-<section class="item__card">
-    <h6>WOMEN COLLECTION</h6>
-    <div class="item__card__info">
-        <h5>Moschino Cheap And Chic</h5>
-        <p>Compellingly actualize fully researched processes before proactive outsourcing. Progressively syndicate
-            collaborative architectures before cutting-edge services. Completely visualize parallel core
-            competencies
-            rather than exceptional portals.</p>
-        <div class="item__info">
-            <div>
-                <span>MATERIAL:</span><span> COTTON</span>
-            </div>
-            <div>
-                <span>DESIGNER:</span><span> BINBURHAN</span>
-            </div>
-        </div>
-        <div class="item__prise">$561</div>
-    </div>
-    <div class="item__specifications">
-        <div class="item__spec__box">
-            <h4>CHOOSE COLOR</h4>
-            <button class="single__btn__color">red</button>
-        </div>
-        <div class="item__spec__box">
-            <h4>CHOOSE SIZE</h4>
-            <button class="single__btn__size">XXL</button>
-        </div>
-        <div class="item__spec__box">
-            <h4>QUANTITY</h4>
-            <input type="number" class="single__btn__count" value="2">
-        </div>
-    </div>
-    <button class="single__btn">Add to Cart</button>
+<!-- end main -->
+<section class="offers__box product__offers__box center">
+    <article class="offers__list1 offers__list product__offers__list">
+        <h5>Free Delivery</h5>
+        <p>Worldwide delivery on all. Authorit tively morph next-generation innov tion with extensive
+            models.
+        </p>
+    </article>
+    <article class="offers__list2 offers__list product__offers__list">
+        <h5>Sales &amp;&nbsp;discounts</h5>
+        <p>Worldwide delivery on all. Authorit tively morph next-generation innov tion with extensive
+            models.
+        </p>
+    </article>
+    <article class="offers__list3 offers__list product__offers__list">
+        <h5>Quality assurance</h5>
+        <p>Worldwide delivery on all. Authorit tively morph next-generation innov tion with extensive
+            models.
+        </p>
+    </article>
 </section>
-<!-- end item__card -->
-<section class="ower__product center">
-    <header>
-        <h4>you may like also</h4>
-    </header>
-    <div class="items__list">
-        <article class="item__box">
-            <a href="singlepage.html"><img src="img/single2.jpg" alt="single2"></a>
-            <a href="singlepage.html">
-                <h4>Mango People T-shirt</h4>
-            </a>
-            <h5>$52.00</h5>
-            <a class="add__tocard" onclick="addToCard();">Add to Cart</a>
-        </article>
-        <article class="item__box">
-            <a href="singlepage.html"><img src="img/single3.jpg" alt="single3"></a>
-            <a href="singlepage.html">
-                <h4>Mango People T-shirt</h4>
-            </a>
-            <h5>$52.00</h5>
-            <a class="add__tocard" onclick="addToCard();">Add to Cart</a>
-        </article>
-        <article class="item__box">
-            <a href="singlepage.html"><img src="img/single4.jpg" alt="single4"></a>
-            <a href="singlepage.html">
-                <h4>Mango People T-shirt</h4>
-            </a>
-            <h5>$52.00</h5>
-            <a class="add__tocard" onclick="addToCard();">Add to Cart</a>
-        </article>
-        <article class="item__box">
-            <a href="singlepage.html"><img src="img/single5.jpg" alt="single5"></a>
-            <a href="singlepage.html">
-                <h4>Mango People T-shirt</h4>
-            </a>
-            <h5>$52.00</h5>
-            <a class="add__tocard" onclick="addToCard();">Add to Cart</a>
-        </article>
-    </div>
-</section>
-<!-- end ower__product -->
+<!-- end offers__box -->
 <footer class="footer">
     <aside class="subscribe">
         <div class="subscribe__slider">

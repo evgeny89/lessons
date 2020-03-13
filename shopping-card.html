@@ -1,10 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BRAND Product</title>
+    <title>Shoping Card</title>
     <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style/style.css">
     <script src="https://kit.fontawesome.com/5fef815a08.js" crossorigin="anonymous"></script>
@@ -14,7 +13,6 @@
         }
     </script>
 </head>
-
 <body>
 <header class="header center">
     <div class="header__left">
@@ -103,7 +101,7 @@
 <nav class="nav">
     <ul class="menu center">
         <li class="menu__list"><a href="index.html" class="menu__link">Home</a></li>
-        <li class="menu__list"><a href="catalog.html" class="menu__link">Man</a>
+        <li class="menu__list"><a href="#" class="menu__link">Man</a>
             <div class="drop__menu">
                 <div>
                     <h4>WOMEN</h4>
@@ -192,7 +190,7 @@
                 </div>
             </div>
         </li>
-        <li class="menu__list"><a href="#" class="menu__link">Hot Deals</a></li>
+        <li class="menu__list"><a href="" class="menu__link">Hot Deals</a></li>
     </ul>
 </nav>
 <!-- end nav -->
@@ -205,86 +203,108 @@
     </nav>
 </section>
 <!-- end promo__product -->
-<div class="single__preview center">
-    <a href="#" class="preview__prew"></a>
-    <a href="#" class="preview__next"></a>
+<div class="main__basket center">
+    <table class="basket">
+        <thead>
+        <colgroup>
+            <col class="td__main">
+        </colgroup>
+        <tr>
+            <th>Product Details</th>
+            <th>unite Price</th>
+            <th>Quantity</th>
+            <th>shipping</th>
+            <th>Subtota</th>
+            <th>ACTION</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>
+                <div class="basket__product">
+                    <img src="img/item9.jpg" alt="product" onclick="addToCard();">
+                    <h4><a href="singlepage.html">Mango People T-shirt</a></h4>
+                    <p>Color: <span>Red</span></p>
+                    <p>Size: <span>XII</span></p>
+                </div>
+            </td>
+            <td>$150</td>
+            <td>
+                <input type="number" value="2">
+            </td>
+            <td>FREE</td>
+            <td>$300</td>
+            <td><a href="#"><img src="img/x.png" alt="del"></a></td>
+        </tr>
+        <tr>
+            <td>
+                <div class="basket__product">
+                    <img src="img/item10.jpg" alt="product" onclick="addToCard();">
+                    <h4><a href="singlepage.html">Mango People T-shirt</a></h4>
+                    <p>Color: <span>Red</span></p>
+                    <p>Size: <span>XII</span></p>
+                </div>
+            </td>
+            <td>$150</td>
+            <td>
+                <input type="number" value="2">
+            </td>
+            <td>FREE</td>
+            <td>$300</td>
+            <td><a href="#"><img src="img/x.png" alt="del"></a></td>
+        </tr>
+        <tr>
+            <td>
+                <div class="basket__product">
+                    <img src="img/item13.jpg" alt="product" onclick="addToCard();">
+                    <h4><a href="singlepage.html">Mango People T-shirt</a></h4>
+                    <p>Color: <span>Red</span></p>
+                    <p>Size: <span>XII</span></p>
+                </div>
+            </td>
+            <td>$150</td>
+            <td>
+                <input type="number" value="2">
+            </td>
+            <td>FREE</td>
+            <td>$300</td>
+            <td><a href="#"><img src="img/x.png" alt="del"></a></td>
+        </tr>
+        </tbody>
+    </table>
+    <footer>
+        <button>CLEAR SHOPPING CART</button>
+        <button>CONTINUE SHOPPING</button>
+    </footer>
 </div>
-<!-- end single__preview -->
-<section class="item__card">
-    <h6>WOMEN COLLECTION</h6>
-    <div class="item__card__info">
-        <h5>Moschino Cheap And Chic</h5>
-        <p>Compellingly actualize fully researched processes before proactive outsourcing. Progressively syndicate
-            collaborative architectures before cutting-edge services. Completely visualize parallel core
-            competencies
-            rather than exceptional portals.</p>
-        <div class="item__info">
-            <div>
-                <span>MATERIAL:</span><span> COTTON</span>
-            </div>
-            <div>
-                <span>DESIGNER:</span><span> BINBURHAN</span>
-            </div>
-        </div>
-        <div class="item__prise">$561</div>
+<!-- end main__basket -->
+<div class="delivery center">
+    <div class="form__adress">
+        <h4>Shipping Adress</h4>
+        <form action="#">
+            <button class="form__select">Bangladesh</button>
+            <input type="text" placeholder="State" class="form__state">
+            <input type="text" placeholder="Postcode / Zip" class="form__postcode">
+            <button class="form__submit">get a quote</button>
+        </form>
     </div>
-    <div class="item__specifications">
-        <div class="item__spec__box">
-            <h4>CHOOSE COLOR</h4>
-            <button class="single__btn__color">red</button>
-        </div>
-        <div class="item__spec__box">
-            <h4>CHOOSE SIZE</h4>
-            <button class="single__btn__size">XXL</button>
-        </div>
-        <div class="item__spec__box">
-            <h4>QUANTITY</h4>
-            <input type="number" class="single__btn__count" value="2">
-        </div>
+    <div class="form__discount">
+        <h4>coupon discount</h4>
+        <p>Enter your coupon code if you have one</p>
+        <form action="#">
+            <input type="text" placeholder="State" class="form__state">
+            <button class="form__submit">Apply coupon</button>
+        </form>
     </div>
-    <button class="single__btn">Add to Cart</button>
-</section>
-<!-- end item__card -->
-<section class="ower__product center">
-    <header>
-        <h4>you may like also</h4>
-    </header>
-    <div class="items__list">
-        <article class="item__box">
-            <a href="singlepage.html"><img src="img/single2.jpg" alt="single2"></a>
-            <a href="singlepage.html">
-                <h4>Mango People T-shirt</h4>
-            </a>
-            <h5>$52.00</h5>
-            <a class="add__tocard" onclick="addToCard();">Add to Cart</a>
-        </article>
-        <article class="item__box">
-            <a href="singlepage.html"><img src="img/single3.jpg" alt="single3"></a>
-            <a href="singlepage.html">
-                <h4>Mango People T-shirt</h4>
-            </a>
-            <h5>$52.00</h5>
-            <a class="add__tocard" onclick="addToCard();">Add to Cart</a>
-        </article>
-        <article class="item__box">
-            <a href="singlepage.html"><img src="img/single4.jpg" alt="single4"></a>
-            <a href="singlepage.html">
-                <h4>Mango People T-shirt</h4>
-            </a>
-            <h5>$52.00</h5>
-            <a class="add__tocard" onclick="addToCard();">Add to Cart</a>
-        </article>
-        <article class="item__box">
-            <a href="singlepage.html"><img src="img/single5.jpg" alt="single5"></a>
-            <a href="singlepage.html">
-                <h4>Mango People T-shirt</h4>
-            </a>
-            <h5>$52.00</h5>
-            <a class="add__tocard" onclick="addToCard();">Add to Cart</a>
-        </article>
+    <div class="total">
+        <div class="total__box">
+            <h5>Sub total <span>$900</span></h5>
+            <h4>Grand total <span>$900</span></h4>
+        </div>
+        <button class="total__btn">proceed to checkout</button>
     </div>
-</section>
-<!-- end ower__product -->
+</div>
+<!-- end delivery -->
 <footer class="footer">
     <aside class="subscribe">
         <div class="subscribe__slider">
@@ -390,5 +410,4 @@
 </footer>
 <!-- end footer -->
 </body>
-
 </html>
