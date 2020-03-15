@@ -178,8 +178,7 @@
       }
 
       &:hover {
-        border: 1px solid #c7c7c7;
-        background-color: rgba(230, 230, 230, 0.5);
+        border: 1px solid $main-color;
       }
     }
 
@@ -228,26 +227,20 @@
   .single__btn {
     height: 55px;
     width: 537px;
-    background-color: $bg-color;
-    border: 1px solid $main-color2;
     font-size: 16px;
     font-weight: bold;
-    color: $main-color2;
     padding-left: 248px;
     text-align: left;
     background-image: url(../img/redcart.png);
     background-repeat: no-repeat;
     background-position: 208px center;
-    outline: none;
     margin-top: 28px;
     margin-bottom: 112px;
 
-    &:hover {
-      background-color: rgba(239, 91, 113, 0.2);
-    }
+    @include third-btn;
 
-    &:active {
-      box-shadow: inset 1px 1px 1px $main-color2, inset -1px -1px 1px $main-color2;
+    &:hover {
+      background-image: url(../img/cartWhite.png);
     }
   }
 }

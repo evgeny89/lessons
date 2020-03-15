@@ -50,7 +50,7 @@
 
       &:last-child img:hover {
         transform: rotate(360deg);
-        transition-duration: 1s;
+        transition-duration: 1.5s;
       }
     }
 
@@ -105,22 +105,11 @@
     button {
       height: 50px;
       width: 235px;
-      outline: none;
       font-size: 14px;
       font-weight: bold;
-      color: #4a4a4a;
-      background-color: $bg-color;
-      border: 1px solid $bordercolor;
       margin: 45px 0;
 
-      &:hover {
-        background-color: $main-color;
-        color: $bg-color;
-      }
-
-      &:active {
-        transform: scale(.96);
-      }
+      @include secondary-btn;
     }
   }
 }
@@ -162,24 +151,10 @@
   button {
     font-size: 11px;
     font-weight: bold;
-    color: #4a4a4a;
     text-transform: uppercase;
     padding: 12px 16px;
-    border: 1px solid $bordercolor;
-    background-color: $bg-color;
 
-    &:focus {
-      outline: none;
-    }
-
-    &:not(.form__select):hover {
-      background-color: $main-color;
-      color: $bg-color;
-    }
-
-    &:not(.form__select):active {
-      transform: scale(.98);
-    }
+    @include secondary-btn;
   }
 
   .form__select {
@@ -192,8 +167,13 @@
     background-repeat: no-repeat;
     background-position: 334px 20px;
 
-    &:focus {
+    &:focus,
+    &:hover,
+    &:active {
+      background-color: $bg-color;
       border-color: $bordercolor;
+      color: #b1b1b1;
+      transform: none;
     }
   }
 
@@ -214,7 +194,7 @@
 
       h5 {
         font-size: 11px;
-        color: #4a4a4a;
+        color: $text-btn;
         text-transform: uppercase;
 
         span {
@@ -239,18 +219,17 @@
     &__btn {
       height: 50px;
       width: 273px;
-      outline: none;
       font-size: 16px;
       font-weight: bold;
-      color: $bg-color;
       text-transform: uppercase;
-      background-color: $main-color;
+
+      @include first-btn;
 
       &:hover {
-        opacity: .8;
-        border-color: $main-color2;
+        background-color: #f5f3f3;
       }
     }
   }
 }
+
 /* end main__basket */
