@@ -1,12 +1,14 @@
 /**********************/
 /* file checkout.html */
 /**********************/
+@import "vars";
+@import "mixins";
 
 .shipper {
 
   margin-top: 62px;
 
-  article {
+  & > div {
     border-bottom: 1px solid #e8e8e8;
 
     & > input {
@@ -14,6 +16,10 @@
 
       &:checked + label {
         color: $main-color2;
+      }
+
+      &:checked ~ .shipper__label {
+        display: flex;
       }
     }
 
@@ -27,7 +33,7 @@
     }
 
     .shipper__label {
-      display: flex;
+      display: none;
       justify-content: space-between;
       margin-left: 35px;
 
@@ -91,7 +97,7 @@
             &:before {
               position: absolute;
               top: 3px;
-              left: 0px;
+              left: 0;
               content: "";
               font-size: 0;
               height: 14px;
@@ -159,9 +165,14 @@
           margin: 16px 0 22px;
           outline: none;
           padding: 15px;
+          transition: border-color .3s;
 
           &:focus {
             border-color: $main-color2;
+          }
+
+          &:hover {
+            border-color: $main-color;
           }
         }
       }

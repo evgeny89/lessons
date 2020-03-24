@@ -23,6 +23,7 @@ body {
 
 a {
   text-decoration: none;
+  transition: color .3s, font-weight .3s;
 }
 
 /* конец сброса стилей */
@@ -40,26 +41,6 @@ a {
     position: relative;
     display: flex;
     align-items: center;
-  }
-
-  &__card {
-    cursor: pointer;
-    background-color: inherit;
-    border: none;
-    outline: none;
-    margin-right: 26px;
-
-    &:hover {
-      transform: scale(1.1);
-    }
-
-    &:active {
-      transform: scale(.9);
-    }
-
-    &:focus + .drop__card {
-      display: block;
-    }
   }
 
   .logo {
@@ -80,11 +61,15 @@ a {
     background-position: 68px 17px;
     padding-right: 15px;
     cursor: pointer;
-
+    transition: color 0.3s, background-color .5s, transform .1s;
 
     &:hover {
       color: $main-color;
       background-color: $bg-color;
+    }
+
+    &:active {
+      transform: scale(.95);
     }
 
     &:focus {
@@ -115,13 +100,52 @@ a {
     border-left: none;
     cursor: pointer;
     outline: none;
+    transition: transform .1s, color .3s;
+    color: #a4a4a4;
 
     &:hover {
-      opacity: 0.8;
+      color: $main-color;
     }
 
     &:active {
-      box-shadow: inset 1px 1px 6px $main2color, inset -1px -1px 6px $main2color;
+      transform: scale(.95);
+    }
+  }
+
+  &__card {
+    position: relative;
+    cursor: pointer;
+    background-color: inherit;
+    margin-right: 26px;
+    transition: transform .1s;
+    padding: 5px;
+
+    .count {
+      position: absolute;
+      height: 19px;
+      width: 19px;
+      background-color: #f16d7f;
+      border-radius: 50%;
+      font-size: 12px;
+      font-weight: bold;
+      color: $bg-color;
+      top: -8px;
+      left: 22px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    &:hover {
+      transform: scale(1.05);
+    }
+
+    &:active {
+      transform: scale(.9);
+    }
+
+    &:hover + .drop__card {
+      display: block;
     }
   }
 
@@ -182,7 +206,6 @@ a {
 .drop__browse__box {
   position: relative;
 
-
   .drop__browse {
     position: absolute;
     display: none;
@@ -235,9 +258,9 @@ a {
     a {
       font-size: 14px;
       color: #4f4f4f;
-      text-align: right;
       letter-spacing: 0.03em;
       line-height: 28px;
+      display: block;
 
       &:hover {
         @include hover-link;
@@ -256,7 +279,8 @@ a {
   position: absolute;
   display: none;
   z-index: 2;
-  top: 40px;
+  top: 35px;
+  left: 0;
   padding: 20px 16px;
   background-color: $bg-color;
   border-radius: 5px;
@@ -340,7 +364,6 @@ a {
   &:hover {
     display: block;
   }
-
 }
 
 /* end drop__card */
@@ -354,8 +377,19 @@ a {
   z-index: 2;
   border-radius: 5px;
 
+  & div:first-child {
+    -ms-grid-column: 1;
+  }
+
+  & div:last-child {
+    -ms-grid-column: 3;
+  }
+
+  & div:nth-child(2) {
+    -ms-grid-column: 2;
+  }
+
   div:not(:last-of-type) {
-    background-color: $bg-color;
     padding-right: 45px;
   }
 
@@ -382,6 +416,7 @@ a {
     font-size: 14px;
     color: #646464;
     letter-spacing: 0.03em;
+    display: block;
 
     &:hover {
       @include hover-link;
@@ -396,12 +431,13 @@ a {
   }
 }
 
-.menu li:nth-child(n+6) > .drop__menu {
+.menu li:nth-child(n+5) > .drop__menu {
   right: 0;
 }
 
 .menu__list:hover .drop__menu {
   display: flex;
+  display: -ms-grid;
 }
 
 /* end drop__menu */
@@ -573,6 +609,7 @@ a {
         background-image: url(../img/cartwhite.png);
         background-repeat: no-repeat;
         background-position: 12px 8px;
+        transition: box-shadow .3s;
 
         &:hover {
           box-shadow: 1px 1px 2px $bg-color, -1px -1px 2px $bg-color;
@@ -734,11 +771,12 @@ a {
 
 /* блок subscribe */
 .subscribe {
-  height: 438px;
+  min-height: 438px;
   background-image: url(../img/subscribse.jpg);
   background-repeat: no-repeat;
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
+  flex-wrap: wrap;
   margin-bottom: 110px;
 
   /* блок slider */
@@ -815,6 +853,7 @@ a {
         width: 38px;
         padding: 20px 0;
         margin-right: 13px;
+        transition: background-color .3s;
 
         &:after {
           position: absolute;
@@ -846,7 +885,7 @@ a {
   .subscribe__form {
     width: 334px;
     margin-top: 111px;
-    margin-right: 322px;
+    margin-left: 150px;
 
     h5 {
       margin-top: 37px;
@@ -912,7 +951,7 @@ a {
   margin-bottom: 100px;
 
   .footer__about {
-    min-width: 430px;
+    flex-basis: 435px;
 
     p {
       margin-top: 30px;
@@ -921,7 +960,6 @@ a {
       color: #898989;
       letter-spacing: 0.03em;
       line-height: 24px;
-      padding-right: 60px;
     }
 
     .logo {
@@ -932,11 +970,12 @@ a {
   .footer__nav {
     margin-top: 14px;
     display: flex;
-
+    justify-content: space-around;
+    flex-grow: 1;
+    margin-left: 50px;
 
     &__box {
-      width: 155px;
-      margin: 0 30px;
+      flex-basis: 160px;
 
       li {
         list-style-type: none;
@@ -957,6 +996,7 @@ a {
         color: #898989;
         letter-spacing: 0.03em;
         line-height: 42px;
+        display: block;
 
         &:hover {
           @include hover-link;

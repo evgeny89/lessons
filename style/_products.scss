@@ -2,6 +2,7 @@
 /*  ФАЙЛ catalog.html */
 /**********************/
 @import "vars";
+@import "mixins";
 /*  блок catalog */
 .catalog {
   height: 148px;
@@ -97,6 +98,7 @@
         label {
           cursor: pointer;
           color: #6f6e6e;
+          display: block;
 
           &:hover {
             color: $main-color2;
@@ -131,15 +133,18 @@
 
   /* start main__products */
   &__products {
-    flex-grow: 3;
     margin-left: 50px;
+    -ms-flex-preferred-size: 850px;
 
     /* шапка раздела */
     &__head {
       display: grid;
+      display: -ms-grid;
       grid-template-areas: "box1 box2 box3" "box4 box4 box4";
       grid-template-columns: 1fr 1fr 1fr;
       grid-template-rows: 1fr 50px;
+      -ms-grid-columns: 1fr 1fr 1fr;
+      -ms-grid-rows: 1fr 50px;
 
 
       h4 {
@@ -152,6 +157,7 @@
 
       .products__head__trend {
         grid-area: box1;
+        -ms-grid-column: 1;
         margin-bottom: 42px;
 
         div {
@@ -181,6 +187,7 @@
 
       .products__head__size {
         grid-area: box2;
+        -ms-grid-column: 2;
         font-size: 14px;
         color: #6f6e6e;
         line-height: 20px;
@@ -212,6 +219,7 @@
               width: 13px;
               background-color: $bg-color;
               border: 1px solid $main2color;
+              transition: border-color .3s;
               left: 0;
               top: 0;
             }
@@ -239,15 +247,65 @@
 
       .products__head__prise {
         grid-area: box3;
+        -ms-grid-column: 3;
         margin-bottom: 42px;
 
         input {
-          width: 262px;
+          width: 100%;
+          display: none;
+        }
+
+        label {
+          display: block;
+          position: relative;
+          height: 6px;
+          width: 100%;
+          background-color: #f0f0f0;
+          border-radius: 3px;
+          margin-bottom: 20px;
+
+          span {
+            position: absolute;
+            display: inline-block;
+            height: 6px;
+            width: 124px;
+            background-color: #f16d7f;
+            left: 30px;
+
+            &:before,
+            &:after {
+              position: absolute;
+              content: "";
+              font-size: 0;
+              height: 14px;
+              width: 14px;
+              background-color: #f16d7f;
+              border-radius: 14px;
+              top: -4px;
+            }
+
+            &:before {
+              left: -2px;
+            }
+
+            &:after {
+              right: -2px;
+            }
+          }
+        }
+
+        .min__max {
+          display: flex;
+          justify-content: space-between;
+          font-size: 14px;
+          color: #6f6e6e;
         }
       }
 
       .products__head__sort {
         grid-area: box4;
+        -ms-grid-row: 2;
+        -ms-grid-column-span: 3;
         height: 50px;
         background-color: #f3f3f3;
         padding: 10px;
@@ -305,6 +363,7 @@
     .main__products__foot {
       display: flex;
       justify-content: space-between;
+
 
       .products__nav {
         height: 44px;
