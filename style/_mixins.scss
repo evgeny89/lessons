@@ -1,3 +1,5 @@
+@import "vars";
+
 @mixin main-logo {
   position: relative;
   display: flex;
@@ -44,6 +46,7 @@
   color: $bg-color;
   background-color: $main-color;
   text-align: center;
+  transition: color .3s, border .3s, background-color .3s;
 
   &:hover {
     color: $main-color;
@@ -62,6 +65,7 @@
   background-color: $bg-color;
   border: 1px solid $bordercolor;
   text-align: center;
+  transition: color .3s, border-color .3s;
 
   &:hover {
     border-color: $main-color;
@@ -78,6 +82,7 @@
   color: $main-color2;
   background-color: $bg-color;
   border: 1px solid $main-color2;
+  transition: color .3s, background-color .3s;
 
   &:hover {
     background-color: $main-color2;

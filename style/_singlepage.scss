@@ -2,6 +2,8 @@
 /*  ФАЙЛ singepage.html */
 /************************/
 @import "vars";
+@import "mixins";
+
 /* start single__preview */
 .single__preview {
   position: relative;
@@ -19,6 +21,7 @@
     height: 47px;
     top: 45%;
     background-color: #d8d8d8;
+    transition: background-color .3s;
   }
 
   .preview__prew {
@@ -104,11 +107,25 @@
       text-transform: uppercase;
     }
 
+    .stars {
+      color: #f1b746;
+      margin: 25px auto;
+      font-size: 19px;
+      letter-spacing: -3px;
+
+      i {
+        transition: transform .1s;
+
+        &:hover {
+          transform: scale(1.2);
+        }
+      }
+    }
+
     p {
       font-size: 14px;
       font-weight: 300;
       color: #5e5e5e;
-      margin-top: 60px;
       line-height: 24px;
     }
 
@@ -146,8 +163,37 @@
     justify-content: center;
     margin-top: 32px;
 
-    div {
+    .item__spec__box {
       margin: 0 26px;
+
+      .single__btn__color {
+        padding-left: 40px;
+
+        &:before {
+          position: absolute;
+          content: "";
+          font-size: 0;
+          height: 12px;
+          width: 12px;
+          background-color: $main-color;
+          left: 12px;
+          top: 11px;
+        }
+      }
+
+      .single__btn__size:after,
+      .single__btn__color:after {
+        position: absolute;
+        content: "";
+        font-size: 0;
+        height: 5px;
+        width: 5px;
+        border-bottom: 1px solid #bcbcbc;
+        border-left: 1px solid #bcbcbc;
+        transform: rotate(-45deg);
+        right: 10px;
+        top: 12px;
+      }
     }
 
     h4 {
@@ -180,47 +226,6 @@
       &:hover {
         border: 1px solid $main-color;
       }
-    }
-
-    & .single__btn__color {
-      padding-left: 40px;
-
-      &:before {
-        position: absolute;
-        content: "";
-        font-size: 0;
-        height: 12px;
-        width: 12px;
-        background-color: $main-color;
-        left: 12px;
-        top: 11px;
-      }
-
-      &:after {
-        position: absolute;
-        content: "";
-        font-size: 0;
-        height: 5px;
-        width: 5px;
-        border-bottom: 1px solid #bcbcbc;
-        border-left: 1px solid #bcbcbc;
-        transform: rotate(-45deg);
-        right: 10px;
-        top: 12px;
-      }
-    }
-
-    .single__btn__size:after {
-      position: absolute;
-      content: "";
-      font-size: 0;
-      height: 5px;
-      width: 5px;
-      border-bottom: 1px solid #bcbcbc;
-      border-left: 1px solid #bcbcbc;
-      transform: rotate(-45deg);
-      right: 10px;
-      top: 12px;
     }
   }
 
